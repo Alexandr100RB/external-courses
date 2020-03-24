@@ -1,10 +1,8 @@
 function checkType(argument) {
-    if ((isNaN(argument)) === true) {
-        return undefined;
-    } else if ((typeof argument) === 'number') {
-        return 'number';
-    } else if ((typeof argument) === 'string') {
+    if (typeof argument === 'string') {
         return 'string';
+    } else if ((typeof argument === 'number') && ((isNaN(argument)) !== true)) {
+        return 'number';
     }
     return undefined;
 }

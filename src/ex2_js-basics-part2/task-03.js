@@ -1,16 +1,17 @@
 function countElements(arr) {
-    let evenNumbers = 0;
-    let oddNumbers = 0;
-    let zeros = 0;
+    let evenNumbers = 0,
+        oddNumbers = 0,
+        nullElements = 0;
     for (let element of arr) {
-        if (arr[element] === 0) {
-            zeros++;
-        } else if ((arr[element] % 2) === 0) {
+        if (element === 0) {
+            nullElements++;
+        } else if ((element % 2) === 0) {
             evenNumbers++;
+        } else {
+            oddNumbers++;
         }
     }
-    let countedElements = [zeros, evenNumbers, oddNumbers];
-    return countedElements;
+    return [evenNumbers, oddNumbers, nullElements];
 }
 
 module.exports = countElements();

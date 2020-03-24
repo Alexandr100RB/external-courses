@@ -1,4 +1,4 @@
-function returnMax(arr) {
+function returnMaxElement(arr) {
     let maxElement = 0;
     for (let element of arr) {
         if (arr[element] > maxElement) {
@@ -8,4 +8,4 @@ function returnMax(arr) {
     return maxElement;
 }
 
-module.exports = returnMax();
+module.exports = returnMaxElement();
